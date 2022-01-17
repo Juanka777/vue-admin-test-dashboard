@@ -72,13 +72,13 @@ export default {
         ],
         'About',
         [
+          // {
+          //   href: 'https://admin-null.justboil.me',
+          //   label: 'Premium Demo',
+          //   icon: 'credit-card'
+          // },
           {
-            href: 'https://admin-null.justboil.me',
-            label: 'Premium Demo',
-            icon: 'credit-card'
-          },
-          {
-            href: 'https://justboil.me/bulma-admin-template/null',
+            href: 'https://github.com/vikdiesel/admin-null-vue-bulma-dashboard',
             label: 'About',
             icon: 'help-circle'
           }

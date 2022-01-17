@@ -10,25 +10,40 @@
       </div>
       <div class="level-right">
         <div class="level-item">
-          <div class="buttons is-right">
-            <a href="https://admin-null.justboil.me/" target="_blank" class="button is-light">
-              <b-icon icon="credit-card" custom-size="default"/>
-              <span>Premium Demo</span>
-            </a>
+          <div class="button is-primary is-beefy" @click="personNewModal=true">
+              <b-icon icon="account-multiple" custom-size="default" class="has-fill-white"/>
+              <span class="has-text-white-ter">Create a new Person</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- New Person Modal -->
+    <create-new-person
+        :isActive.sync="personNewModal"
+        @close="personNewModal=false">
+    </create-new-person>
   </section>
 </template>
 
 <script>
+import createNewPerson from '@/components/CreateNewPerson.vue'
+
 export default {
   name: 'TitleBar',
   props: {
     titleStack: {
       type: Array,
       default: () => []
+    }
+  },
+  components:
+  {
+    createNewPerson
+  },
+  data () {
+    return {
+      personNewModal: false
     }
   }
 }
